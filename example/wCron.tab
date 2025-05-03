@@ -1,0 +1,32 @@
+# ----------------------------------------------------------------------
+# Title          cron.tab
+# Author         Hans Harder
+# Date           April 2025
+# Version        4.0.5
+#
+# Description    Unix like cron entries for repeating jobs
+# ----------------------------------------------------------------------
+@log=3
+@loginfodir=c:\bin\tools\wcronlog
+#
+# --- define which ext is using which interpreter 
+@cmdext=py;c:\python311\python.exe
+@cmdext=pl;c:\perl\bin\perl.exe
+@cmdext=cmd;c:\bin\tools\Cmd.exe;/C
+#
+# --- define that when shutdown/stop or startup/start happens of the cron service
+@shutdowncmd=c:\bin\tools\test.cmd
+@startupcmd=c:\bin\tools\test.cmd
+#
+# ----------------------------------------------------------------------
+# +------------- Minute            (range: 0-59)
+# | +----------- Hour              (range: 0-23)
+# | | +--------- Day of the Month  (range: 1-31)
+# | | | +------- Month of the Year (range: 1-12)
+# | | | | +----- Day of the Week   (range: 1-7, where 1 is Monday)
+# | | | | |
+# * * * * *      Command           (if starts with ~ it suppresses logging)
+# ----------------------------------------------------------------------
+8-58/10 * * * * ~C:\bin\tools\test.cmd cronentry 22 333
+#
+#EOF
