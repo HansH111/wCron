@@ -2,6 +2,8 @@
 
 wCron is a lightweight Windows service that provides Unix-style cron functionality for scheduling and executing tasks based on a cron-like configuration file. It supports time-based task scheduling, logging, and service management.
 
+repo moved to: https://codeberg.org/HansH111/wCron
+
 ## Features
 
 - **Cron Scheduling**: Supports standard cron syntax for minute, hour, day, month, and weekday, with extensions like `*` (every), `?` (startup time), ranges (`0-23`), steps (`1-23/4`), and lists (`0,3-6/2,9`).
